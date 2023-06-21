@@ -1,0 +1,253 @@
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.datePickerDisable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.datePickerDisable :global(.rmdp-input) {
+  height: 40px !important;
+  width: 100% !important;
+  font-size: 12px;
+  padding: 0 20px;
+  background-color: transparent;
+  pointer-events: none;
+  border: 1px solid rgb(160, 160, 160) !important;
+}
+
+.datePicker :global(.rmdp-week-day) {
+  color: orange !important;
+}
+
+.datePicker :global(.rmdp-arrow) {
+  border: 1px solid orange;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 3px;
+  margin-top: 5px;
+  padding: 2px;
+  width: 3px;
+}
+
+.datePicker :global(.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover) {
+  background-color: rgb(248, 187, 74);
+  color: #fff;
+}
+.datePicker :global(.rmdp-day.rmdp-selected span:not(.highlight)) {
+  background-color: orange;
+  box-shadow: 0 0 3px #8798ad;
+  color: #fff;
+}
+.datePicker :global(.rmdp-day.rmdp-today span) {
+  background-color: rgb(248, 187, 74);
+  color: #fff;
+}
+.datePicker :global(.rmdp-day span) {
+  border-radius: 2px !important;
+}
+.datePicker :global(.rmdp-day) {
+  background-color: white;
+  margin: 2px;
+}
+
+.datePicker :global(.rmdp-calendar) {
+  background-color: whitesmoke;
+}
+.datePicker :global(.rmdp-time-picker) {
+  background-color: whitesmoke;
+}
+
+
+.datePicker :global(.rmdp-input) {
+  height: 40px !important;
+  width: 100% !important;
+  font-size: 12px;
+  padding: 0 20px;
+  border: unset;
+}
+.datePicker :global(.rmdp-am) {
+  background-color: white;
+}
+.datePicker :global(.rmdp-container) {
+  width: 100%;
+}
+.datePicker :global(.rmdp-action-button) {
+  color: orange;
+  font-weight: 700;
+}
+
+
+h1.hc-reform + p {
+  clear:both;
+}
+
+.datePicker :global(.rmdp-arrow-container .rmdp-up) + input  {
+width: 20px !important;
+}
+
+/* *********textEditor*********** */
+.text_editor :global(.quill) {
+  height: 241px;
+}
+.text_editor :global(.ql-toolbar) {
+  direction: ltr;
+  display: flex;
+  /* justify-content: flex-end; */
+  background: white;
+  border: unset !important;
+  border-start-start-radius: 4px;
+  border-start-end-radius: 4px;
+}
+@media screen and (max-width: 1499px) {
+  .text_editor .quill {
+    height: unset;
+  }
+
+  .text_editor :global(.ql-container) {
+    height: 216px !important;
+  }
+}
+.text_editor :global(.ql-container) {
+  border-end-end-radius: 4px;
+  border-end-start-radius: 4px;
+  background-color: white;
+  border: unset !important;
+  box-shadow: -1px 43px 48px -52px #00000033 inset;
+}
+.text_editor :global(.ql-editor) {
+  direction: rtl;
+  text-align: start !important;
+  font-family: iranyekan;
+}
+.text_editor :global(.ql-tooltip) {
+  z-index: 11;
+}
+.text_editor :global(.ql-tooltip) {
+  direction: rtl;
+  /* display:flex; */
+  border: unset;
+}
+.text_editor :global(.ql-tooltip[data-mode="link"]::before) {
+  font-family: iranyekan;
+  content: "لینک را وارد کنید :";
+}
+
+.text_editor :global(.ql-tooltip.ql-editing a.ql-action::after) {
+  font-family: iranyekan;
+  content: "ثبت";
+  margin-right: 15px;
+}
+.text_editor :global(.ql-tooltip a.ql-action::after) {
+  font-family: iranyekan;
+  padding: 0 25px 0 12px;
+  color: orange;
+  border-right: unset;
+  content: "اصلاح";
+  display: inline-block;
+}
+.text_editor :global(.ql-tooltip a.ql-remove::before) {
+  font-family: iranyekan;
+  color: orange;
+  content: "پاک کردن";
+}
+.text_editor :global(.ql-snow .ql-tooltip::before) {
+  font-family: iranyekan;
+  margin: 0 5px;
+  content: "لینک : ";
+}
+
+/* Color picker  */
+.colorPicker {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 4px 0 0;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.452);
+}
+
+.inputColor {
+  margin-left: 8px;
+  -webkit-appearance: none;
+  border: none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  background: none;
+}
+.inputColor::-webkit-color-swatch-wrapper {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+}
+.inputColor::-webkit-color-swatch {
+  border: 0;
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: 0px 0px 8px #00000041;
+}
+.inputeTextColor {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  padding-right: 5px;
+  text-shadow: 0px 0px rgb(0, 0, 0);
+}
+
+.selectedImage {
+  position: relative;
+  border: 1px solid rgb(248, 115, 66);
+}
+.selectedImage ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(92, 92, 92, 0.363);
+}
+
+/*RadioBoxButton  */
+.option {
+  background: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 10px;
+  /* border: 1px solid #9C9C9C; */
+  transition: all 0.3s ease;
+}
+.option {
+  border: 1px solid #c7c7c7;
+}
+.option span {
+  font-size: 20px;
+  font-size: 12px;
+  color: #9c9c9c;
+}
+.radioButton:checked:checked ~ .option {
+  background-color: #fff;
+  background-color: #0067770d;
+  border: unset;
+}
+.radioButton:checked:checked ~ .option span {
+  font-family: iranyekanBold;
+  color: #006777;
+  font-weight: bolder;
+}
+
+.dashedBorder {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='17' ry='17' stroke='%23C7C7C7FF' stroke-width='3' stroke-dasharray='28' stroke-dashoffset='45' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 17px;
+}
